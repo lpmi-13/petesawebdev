@@ -1,0 +1,1022 @@
+<title>Treviso &amp; the Veneto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Piazzolla:ital,opsz,wght@0,8..30,400..700;1,8..30,400..600&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style id="page-style">
+  /* ================= tokens ================= */
+  :root{
+    --plaster: #e7e9e1;
+    --plaster-raised: #dee1d6;
+    --paper-card: #f2f3ee;
+    --ink: #221f1a;
+    --ink-soft: #5c5a4d;
+    --rule: #cac8b7;
+    --radicchio: #8c1f3f;
+    --radicchio-strong: #6e1830;
+    --canal: #3c6b6e;
+    --canal-soft: rgba(60,107,110,0.13);
+    --gold: #a97f2f;
+    --gold-wash: rgba(169,127,47,0.16);
+    --status-open: #43683f;
+    --status-taken: #8a5c46;
+    --focus: #2c5c66;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --plaster: #14150f;
+      --plaster-raised: #1d1f16;
+      --paper-card: #191b13;
+      --ink: #ece7d9;
+      --ink-soft: #b3ae9a;
+      --rule: #35362a;
+      --radicchio: #dd7592;
+      --radicchio-strong: #e8899f;
+      --canal: #74ab9f;
+      --canal-soft: rgba(116,171,159,0.16);
+      --gold: #d9b36b;
+      --gold-wash: rgba(217,179,107,0.18);
+      --status-open: #86bd80;
+      --status-taken: #cf9a84;
+      --focus: #86c3cd;
+    }
+  }
+  :root[data-theme="dark"]{
+    --plaster: #14150f;
+    --plaster-raised: #1d1f16;
+    --paper-card: #191b13;
+    --ink: #ece7d9;
+    --ink-soft: #b3ae9a;
+    --rule: #35362a;
+    --radicchio: #dd7592;
+    --radicchio-strong: #e8899f;
+    --canal: #74ab9f;
+    --canal-soft: rgba(116,171,159,0.16);
+    --gold: #d9b36b;
+    --gold-wash: rgba(217,179,107,0.18);
+    --status-open: #86bd80;
+    --status-taken: #cf9a84;
+    --focus: #86c3cd;
+  }
+
+  *{ box-sizing:border-box; }
+  html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } *{ animation-duration:0.01ms !important; transition-duration:0.01ms !important; } }
+
+  body{
+    margin:0;
+    background:var(--plaster);
+    color:var(--ink);
+    font-family:"Public Sans", -apple-system, "Segoe UI", sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  a{ color:inherit; }
+  ::selection{ background:var(--gold-wash); }
+  :focus-visible{ outline:2px solid var(--focus); outline-offset:3px; }
+
+  h1,h2,h3{
+    font-family:"Piazzolla", Georgia, serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+    text-wrap:balance;
+    margin:0;
+  }
+
+  .eyebrow{
+    font-family:"Space Mono", ui-monospace, monospace;
+    font-size:0.7rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--radicchio);
+  }
+
+  .mono{ font-family:"Space Mono", ui-monospace, monospace; font-variant-numeric:tabular-nums; }
+
+  .wrap{ max-width:1100px; margin:0 auto; padding:0 clamp(1.2rem,4vw,2.75rem); }
+
+  [hidden]{ display:none !important; }
+
+  /* ================= topbar ================= */
+  .topbar{
+    position:sticky; top:0; z-index:20;
+    background:var(--plaster);
+    border-bottom:1px solid var(--rule);
+  }
+  .topbar-inner{
+    max-width:1100px; margin:0 auto;
+    padding:0.95rem clamp(1.2rem,4vw,2.75rem);
+    display:flex; align-items:center; justify-content:space-between; gap:1.5rem;
+  }
+  .brand{ display:flex; align-items:baseline; gap:0.5rem; text-decoration:none; }
+  .brand .name{ font-family:"Piazzolla", serif; font-weight:700; font-size:1.28rem; }
+  .brand .region{ font-family:"Space Mono", monospace; font-size:0.68rem; color:var(--ink-soft); letter-spacing:0.03em; }
+  nav.mainnav{ display:flex; gap:clamp(0.9rem,2vw,1.6rem); flex-wrap:wrap; }
+  .nav-link{
+    font-size:0.88rem; text-decoration:none; color:var(--ink-soft);
+    padding-bottom:3px; border-bottom:2px solid transparent;
+  }
+  .nav-link.active, .nav-link:hover{ color:var(--ink); border-bottom-color:var(--radicchio); }
+
+  /* ================= section rhythm ================= */
+  .page{ padding-bottom:3rem; }
+  section{ padding:clamp(2.25rem,5vw,3.5rem) 0; }
+  .rule-top{ border-top:1px solid var(--rule); }
+  .section-head{ max-width:46ch; margin-bottom:clamp(1.75rem,4vw,2.5rem); }
+  .section-head h2{ font-size:clamp(1.55rem,2.8vw,2.05rem); margin-top:0.4rem; }
+  .section-head p{ color:var(--ink-soft); margin-top:0.65rem; }
+  .page-head{ padding-top:clamp(2.25rem,5vw,3.5rem); }
+  .page-head-row{ display:flex; justify-content:space-between; align-items:flex-end; gap:1.5rem; flex-wrap:wrap; }
+  .page-head-row h2{ font-size:clamp(1.8rem,3.4vw,2.4rem); margin-top:0.5rem; }
+  .page-head-row p{ color:var(--ink-soft); margin-top:0.6rem; max-width:52ch; }
+
+  /* ================= HOME hero ================= */
+  .hero{ padding-top:clamp(2.5rem,6vw,4rem); }
+  .hero h1{ font-size:clamp(2.1rem,4.4vw,3.3rem); line-height:1.1; margin-top:0.6rem; max-width:16ch; }
+  .hero .lede{ color:var(--ink-soft); font-size:1.06rem; max-width:56ch; margin-top:1.15rem; }
+
+  .facts-strip{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
+    background:var(--rule); border:1px solid var(--rule); border-radius:6px; overflow:hidden;
+    margin-top:2.25rem;
+  }
+  @media (max-width:760px){ .facts-strip{ grid-template-columns:repeat(2,1fr); } }
+  .fact{ background:var(--paper-card); padding:1.1rem 1.15rem; }
+  .fact .num{ font-family:"Space Mono", monospace; font-size:1.35rem; color:var(--radicchio); }
+  .fact .label{ font-size:0.78rem; color:var(--ink-soft); margin-top:0.3rem; line-height:1.4; }
+
+  .prose{ font-size:1.02rem; max-width:64ch; }
+  .prose p + p{ margin-top:1rem; }
+  .prose strong{ color:var(--ink); font-weight:600; }
+  .two-col{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(2rem,5vw,3.5rem); }
+  @media (max-width:820px){ .two-col{ grid-template-columns:1fr; } }
+
+  .tag{
+    display:inline-flex; align-items:center; gap:0.3rem;
+    font-family:"Space Mono", monospace; font-size:0.68rem; letter-spacing:0.03em; text-transform:uppercase;
+    padding:0.25rem 0.55rem; border-radius:99px; border:1px solid var(--rule); color:var(--ink-soft);
+    background:var(--paper-card);
+  }
+  .tag.accent{ color:var(--radicchio); border-color:currentColor; }
+  .tag.canal{ color:var(--canal); border-color:currentColor; }
+  .tag.open{ color:var(--status-open); border-color:currentColor; }
+  .tag.taken{ color:var(--status-taken); border-color:currentColor; }
+
+  .region-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:1.25rem; }
+  @media (max-width:900px){ .region-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:560px){ .region-grid{ grid-template-columns:1fr; } }
+  .region-card{ background:var(--paper-card); border:1px solid var(--rule); border-radius:8px; padding:1.25rem 1.3rem; }
+  .region-card h3{ font-size:1.05rem; margin-bottom:0.5rem; }
+  .region-card p{ color:var(--ink-soft); font-size:0.9rem; margin:0; }
+  .region-card .dist{ margin-top:0.75rem; font-family:"Space Mono",monospace; font-size:0.72rem; color:var(--canal); }
+
+  .hub-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:1.25rem; }
+  @media (max-width:900px){ .hub-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:560px){ .hub-grid{ grid-template-columns:1fr; } }
+  .hub-card{
+    display:block; text-decoration:none; color:var(--ink);
+    background:var(--paper-card); border:1px solid var(--rule); border-radius:8px;
+    padding:1.5rem 1.4rem; transition:border-color .15s ease, transform .15s ease;
+  }
+  .hub-card:hover{ border-color:var(--radicchio); transform:translateY(-2px); }
+  .hub-card .glyph{ font-family:"Piazzolla",serif; font-style:italic; font-size:1.7rem; color:var(--radicchio); }
+  .hub-card h3{ font-size:1.05rem; margin-top:0.7rem; }
+  .hub-card p{ font-size:0.86rem; color:var(--ink-soft); margin-top:0.4rem; }
+  .hub-card .go{ display:inline-block; margin-top:0.9rem; font-family:"Space Mono",monospace; font-size:0.72rem; letter-spacing:0.04em; text-transform:uppercase; color:var(--canal); }
+
+  /* ================= banners &amp; icons ================= */
+  .page-banner{
+    display:block; width:100%; height:auto;
+    border:1px solid var(--rule); border-radius:8px; overflow:hidden;
+    background:var(--paper-card);
+  }
+  .page-banner svg{ display:block; width:100%; height:auto; }
+  .hero .page-banner{ margin-bottom:2rem; }
+  .page-head .page-banner{ margin-top:1.75rem; }
+  .region-card .icon{ width:42px; height:42px; margin-bottom:0.85rem; display:block; }
+
+  /* ================= filter bar ================= */
+  .filter-bar{ display:flex; gap:0.55rem; flex-wrap:wrap; margin-bottom:1.75rem; }
+  .filter-bar button{
+    font-family:"Space Mono", monospace; font-size:0.74rem; letter-spacing:0.02em;
+    background:var(--paper-card); color:var(--ink-soft); border:1px solid var(--rule);
+    padding:0.45rem 0.85rem; border-radius:99px; cursor:pointer;
+  }
+  .filter-bar button.active{ color:var(--plaster); background:var(--radicchio); border-color:var(--radicchio); }
+  .filter-bar button:hover:not(.active){ border-color:var(--radicchio); color:var(--ink); }
+
+  /* ================= events ================= */
+  .events-list{ display:flex; flex-direction:column; gap:1rem; }
+  .event-card{
+    display:grid; grid-template-columns:5.5rem 1fr auto; gap:1.3rem; align-items:center;
+    background:var(--paper-card); border:1px solid var(--rule); border-radius:8px; padding:1.1rem 1.3rem;
+  }
+  @media (max-width:680px){ .event-card{ grid-template-columns:4.2rem 1fr; } .event-card .event-tag-col{ grid-column:1 / -1; margin-top:0.6rem; } }
+  .date-block{
+    text-align:center; background:var(--plaster-raised); border:1px solid var(--rule); border-radius:6px;
+    padding:0.55rem 0.3rem;
+  }
+  .date-block .mon{ font-family:"Space Mono",monospace; font-size:0.66rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--radicchio); }
+  .date-block .day{ font-family:"Piazzolla",serif; font-weight:700; font-size:1.5rem; line-height:1.1; }
+  .event-card h3{ font-size:1.05rem; }
+  .event-card .meta{ font-size:0.84rem; color:var(--ink-soft); margin-top:0.3rem; }
+  .event-card .desc{ font-size:0.9rem; color:var(--ink-soft); margin-top:0.45rem; max-width:52ch; }
+
+  /* ================= listing cards (stay / marketplace) ================= */
+  .card-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; }
+  @media (max-width:900px){ .card-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:620px){ .card-grid{ grid-template-columns:1fr; } }
+  .listing, .pending-card{
+    background:var(--paper-card); border:1px solid var(--rule); border-radius:8px; padding:1.3rem 1.3rem 1.4rem;
+    display:flex; flex-direction:column; gap:0.7rem;
+  }
+  .listing-top{ display:flex; justify-content:space-between; align-items:flex-start; gap:0.75rem; }
+  .listing h3, .pending-card h3{ font-size:1.02rem; line-height:1.3; }
+  .price{ font-family:"Space Mono",monospace; font-weight:700; color:var(--radicchio); white-space:nowrap; font-size:0.95rem; }
+  .listing .loc, .pending-card .loc{ font-size:0.82rem; color:var(--canal); }
+  .listing .desc, .pending-card .desc{ font-size:0.88rem; color:var(--ink-soft); }
+  .listing .amenities, .pending-card .amenities{ font-size:0.78rem; color:var(--ink-soft); border-top:1px dashed var(--rule); padding-top:0.6rem; margin-top:0.15rem; }
+  .listing-foot{ display:flex; justify-content:space-between; align-items:center; margin-top:auto; padding-top:0.5rem; gap:0.75rem; flex-wrap:wrap; }
+  .host{ font-size:0.78rem; color:var(--ink-soft); }
+
+  /* ================= reviews ================= */
+  .reviews-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:1.25rem; }
+  @media (max-width:760px){ .reviews-grid{ grid-template-columns:1fr; } }
+  .review{
+    background:var(--paper-card); border:1px solid var(--rule); border-radius:8px; padding:1.4rem 1.4rem;
+  }
+  .review .stars{ color:var(--gold); font-size:0.95rem; letter-spacing:0.1em; }
+  .review h3{ font-size:1.02rem; margin-top:0.55rem; }
+  .review p.body{ font-size:0.92rem; color:var(--ink-soft); margin-top:0.55rem; }
+  .review .byline{ font-family:"Space Mono",monospace; font-size:0.72rem; color:var(--ink-soft); margin-top:0.85rem; padding-top:0.7rem; border-top:1px dashed var(--rule); }
+  .review .byline b{ color:var(--ink); font-weight:600; }
+
+  /* ================= forms ================= */
+  .form-card{
+    background:var(--paper-card); border:1px solid var(--rule); border-radius:8px;
+    padding:clamp(1.5rem,4vw,2.25rem); max-width:44rem;
+    display:flex; flex-direction:column; gap:1.1rem;
+  }
+  .form-row{ display:grid; grid-template-columns:1fr 1fr; gap:1.1rem; }
+  @media (max-width:560px){ .form-row{ grid-template-columns:1fr; } }
+  .field-group{ display:flex; flex-direction:column; gap:0.4rem; }
+  .field-group label{ font-family:"Space Mono",monospace; font-size:0.72rem; letter-spacing:0.03em; text-transform:uppercase; color:var(--ink-soft); }
+  .field, select.field, textarea.field{
+    font-family:"Public Sans", sans-serif;
+    font-size:0.95rem;
+    padding:0.7rem 0.85rem;
+    border:1px solid var(--rule);
+    background:var(--plaster-raised);
+    color:var(--ink);
+    border-radius:4px;
+    width:100%;
+  }
+  textarea.field{ resize:vertical; min-height:5.5rem; font-family:"Public Sans",sans-serif; }
+  .field::placeholder{ color:var(--ink-soft); }
+  .form-actions{ display:flex; align-items:center; gap:1rem; }
+  .btn{
+    font-family:"Space Mono", monospace;
+    font-size:0.82rem;
+    letter-spacing:0.03em;
+    background:var(--radicchio);
+    color:var(--plaster);
+    border:1px solid var(--radicchio);
+    padding:0.75rem 1.3rem;
+    border-radius:4px;
+    cursor:pointer;
+    transition:background 0.15s ease;
+    white-space:nowrap;
+  }
+  .btn:hover:not(:disabled){ background:var(--radicchio-strong); }
+  .btn:disabled{ opacity:0.55; cursor:default; }
+  .btn.ghost{ background:transparent; color:var(--ink-soft); border-color:var(--rule); }
+  .btn.ghost:hover:not(:disabled){ background:var(--plaster-raised); color:var(--ink); border-color:var(--ink-soft); }
+  .btn.small{ padding:0.5rem 0.9rem; font-size:0.74rem; }
+  .fineprint{ font-family:"Space Mono",monospace; font-size:0.72rem; color:var(--ink-soft); }
+
+  .notice{
+    border-radius:6px; padding:0.85rem 1rem; font-size:0.88rem; margin-bottom:1.25rem;
+    border:1px solid var(--rule); background:var(--plaster-raised); color:var(--ink-soft);
+  }
+  .notice.success{ border-color:var(--status-open); color:var(--status-open); background:var(--canal-soft); }
+  .notice.error{ border-color:var(--radicchio); color:var(--radicchio); }
+
+  .muted-note{ color:var(--ink-soft); font-size:0.9rem; }
+
+  footer{
+    border-top:1px solid var(--rule);
+    padding:2rem clamp(1.2rem,4vw,2.75rem) 2.5rem;
+    max-width:1100px; margin:0 auto;
+    display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:0.75rem;
+  }
+  footer .brandline{ font-family:"Piazzolla",serif; font-weight:600; }
+  footer .note{ font-family:"Space Mono",monospace; font-size:0.7rem; color:var(--ink-soft); max-width:34ch; }
+  footer .admin-link{ font-family:"Space Mono",monospace; font-size:0.7rem; color:var(--ink-soft); text-decoration:underline; margin-top:0.5rem; display:inline-block; }
+</style>
+
+<div id="app"></div>
+
+<script>
+(function(){
+  var SCRIPT_SOURCE = document.currentScript.textContent;
+
+  /*STATE_START*/
+  var STATE = {
+    marketplace: [
+      { id:"m1", title:"Vintage Bianchi city bike", price:"140", category:"bikes", location:"Barriera Vittoria", desc:"1980s steel frame, recently serviced with new tyres and brake pads. Great for the flat towpaths.", condition:"Good", posted:"2 days ago", seller:"Luca", badgeText:"Available", badgeKind:"open" },
+      { id:"m2", title:"Solid oak dining table", price:"220", category:"furniture", location:"San Zeno", desc:"Seats six comfortably, a few surface marks but structurally solid. Buyer collects.", condition:"Fair", posted:"5 days ago", seller:"Chiara", badgeText:"Available", badgeKind:"open" },
+      { id:"m3", title:"Box of vinyl, Italian pop 70s–80s", price:"35", category:"other", location:"Centro storico", desc:"About forty records, mixed condition, mostly Italian radio hits. Sold as one box.", condition:"Mixed", posted:"1 week ago", seller:"Paolo", badgeText:"Sold", badgeKind:"taken" },
+      { id:"m4", title:"Wooden radicchio crates (x4)", price:"15", category:"other", location:"Fuori Porta Altinia", desc:"Sturdy slatted crates from a local grower, good as-is for storage or planters.", condition:"Used", posted:"3 days ago", seller:"Giovanna", badgeText:"Available", badgeKind:"open" },
+      { id:"m5", title:"Gaggia Classic espresso machine", price:"90", category:"electronics", location:"San Paolo", desc:"Works well, descaled last month. Selling because I upgraded, not because it's broken.", condition:"Good", posted:"yesterday", seller:"Matteo", badgeText:"Available", badgeKind:"open" },
+      { id:"m6", title:"Potted olive tree, 1.5m", price:"60", category:"other", location:"Santa Bona", desc:"Healthy, in a large terracotta pot. Too big for my balcony — needs a van to move.", condition:"Healthy", posted:"4 days ago", seller:"Rosa", badgeText:"Available", badgeKind:"open" }
+    ],
+    stay: [
+      { id:"s1", title:"Studio on the Buranelli", price:"78", type:"apartment", location:"Historic centre · 4 min walk to Piazza dei Signori", desc:"A one-room apartment on the canal, with a small balcony over the water and a kitchenette.", amenities:"Canal view · wifi · washer · self check-in", host:"Elena R.", badgeText:"Available", badgeKind:"open" },
+      { id:"s2", title:"Room in a Frescoed Townhouse", price:"48", type:"room", location:"Via Calmaggiore · shared bathroom", desc:"A quiet room in a 16th-century house with original ceiling frescoes in the hallway.", amenities:"Breakfast included · wifi · bike storage", host:"Marco B.", badgeText:"Available", badgeKind:"open" },
+      { id:"s3", title:"Loft near Porta San Tomaso", price:"120", type:"apartment", location:"Inside the walls · 2 bedrooms", desc:"A converted mill loft with exposed beams, close to one of the old city gates.", amenities:"Sleeps 4 · kitchen · wifi · parking nearby", host:"Sofia &amp; Dario", badgeText:"Booked through Oct 2", badgeKind:"taken" },
+      { id:"s4", title:"Countryside Casale, Prosecco Hills", price:"165", type:"villa", location:"Near Conegliano · vineyard views", desc:"A restored farmhouse among the Prosecco vineyards, with a shared pool and terrace dinners.", amenities:"Sleeps 6 · pool · garden · car recommended", host:"the Zanetti family", badgeText:"Available", badgeKind:"open" },
+      { id:"s5", title:"Attic Room, Pescheria View", price:"55", type:"room", location:"Overlooking the fish market island", desc:"A small top-floor room with sloped ceilings and a window straight onto the canal and market.", amenities:"Wifi · shared kitchen · no lift", host:"Giulia T.", badgeText:"Available", badgeKind:"open" },
+      { id:"s6", title:"Two-Bedroom near Sile Park", price:"95", type:"apartment", location:"Riverside · good for cyclists", desc:"Steps from the towpath into the Sile Regional Park, with secure bike storage in the courtyard.", amenities:"Sleeps 4 · bike storage · wifi · kitchen", host:"Andrea P.", badgeText:"Booked through Sep 30", badgeKind:"taken" }
+    ],
+    pendingMarketplace: [],
+    pendingStay: []
+  };
+  /*STATE_END*/
+
+  function escapeHtml(s){
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function(c){
+      return { "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[c];
+    });
+  }
+
+  /* ---------- decorative illustrations (procedural SVG, theme-aware via CSS vars) ---------- */
+  function archPath(x, yBase, w, h){
+    var r = w/2, yTop = yBase - h;
+    return 'M'+x+','+yBase+' L'+x+','+(yTop+r)+' A'+r+','+r+' 0 0 1 '+(x+w)+','+(yTop+r)+' L'+(x+w)+','+yBase+' Z';
+  }
+  function starPoints(cx, cy, rOuter, rInner, n){
+    var pts = [];
+    for (var i = 0; i < n*2; i++){
+      var r = i % 2 === 0 ? rOuter : rInner;
+      var a = (Math.PI/n)*i - Math.PI/2;
+      pts.push((cx+r*Math.cos(a)).toFixed(1)+','+(cy+r*Math.sin(a)).toFixed(1));
+    }
+    return pts.join(' ');
+  }
+  function wavyPath(y, amp, wavelen, width){
+    var d = 'M0,'+y, x = 0, up = true;
+    while (x < width){
+      var x2 = Math.min(x+wavelen, width);
+      d += ' Q'+(x+wavelen/2)+','+(up ? y-amp : y+amp)+' '+x2+','+y;
+      x = x2; up = !up;
+    }
+    return d;
+  }
+  function leafCluster(cx, cy, scale, rib){
+    var g = '<g transform="translate('+cx+','+cy+') scale('+scale+')">';
+    [-18,0,18].forEach(function(rot,i){
+      g += '<ellipse cx="0" cy="0" rx="26" ry="12" fill="var(--radicchio)" opacity="'+(0.55+i*0.15)+'" transform="rotate('+rot+')"/>';
+    });
+    if (rib) g += '<path d="M-24,0 Q0,-4 24,0" stroke="var(--gold)" stroke-width="1.4" fill="none" opacity="0.8"/>';
+    return g + '</g>';
+  }
+
+  function homeHeroSVG(){
+    var W=1200, H=320, waterY=192, archW=70, archH=118, gap=16, step=archW+gap;
+    var n = Math.ceil(W/step)+1, arches='';
+    for (var i=0;i<n;i++){
+      var x=i*step, accent = (i%4===2);
+      arches += '<path d="'+archPath(x,waterY,archW,archH)+'" fill="'+(accent?'var(--radicchio)':'var(--ink)')+'" opacity="'+(accent?0.88:0.78)+'"/>';
+    }
+    var ripples='';
+    for (var k=0;k<4;k++){
+      var ry = waterY+20+k*26;
+      ripples += '<path d="'+wavyPath(ry,5,58,W)+'" fill="none" stroke="var(--canal)" stroke-width="1.6" opacity="'+(0.5-k*0.09)+'"/>';
+    }
+    return '<svg class="page-banner-svg" viewBox="0 0 '+W+' '+H+'" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="An illustrated skyline of arcaded facades above the canal, with a radicchio leaf motif.">' +
+      '<rect width="'+W+'" height="'+H+'" fill="var(--paper-card)"/>' +
+      '<rect x="0" y="'+waterY+'" width="'+W+'" height="'+(H-waterY)+'" fill="var(--canal-soft)"/>' +
+      '<g transform="translate(0,'+(waterY*2)+') scale(1,-1)" opacity="0.22">'+arches+'</g>' +
+      arches +
+      ripples +
+      leafCluster(W-90,64,1,true) +
+      '</svg>';
+  }
+
+  function eventsBannerSVG(){
+    var W=1200, H=200, colors=['var(--radicchio)','var(--gold)','var(--canal)'], bunting='', stalls='';
+    var postN=15, step=W/(postN-1), stringPath='M0,26';
+    for (var i=0;i<postN;i++){
+      var x=i*step, dip = 14 + 10*Math.sin(i);
+      stringPath += ' '+(i===0?'L':'L')+x.toFixed(1)+','+(26+ (i%2===0?0:6)).toFixed(1);
+    }
+    for (var f=0; f<postN-1; f++){
+      var x0=f*step, x1=(f+1)*step, mx=(x0+x1)/2, topY=30, tipY=68;
+      bunting += '<path d="M'+x0.toFixed(1)+','+topY+' L'+x1.toFixed(1)+','+topY+' L'+mx.toFixed(1)+','+tipY+' Z" fill="'+colors[f%3]+'" opacity="0.85"/>';
+    }
+    var stallW=150, stallGap=54, totalStalls=Math.floor((W-40)/(stallW+stallGap)), startX=(W-(totalStalls*stallW+(totalStalls-1)*stallGap))/2;
+    for (var s=0; s<totalStalls; s++){
+      var sx = startX + s*(stallW+stallGap), base=190, roofH=34, bodyH=64;
+      var tone = s%2===0 ? 'var(--radicchio)' : 'var(--canal)';
+      stalls += '<path d="M'+sx+','+(base-bodyH)+' L'+(sx+stallW/2)+','+(base-bodyH-roofH)+' L'+(sx+stallW)+','+(base-bodyH)+' Z" fill="'+tone+'" opacity="0.85"/>';
+      stalls += '<rect x="'+(sx+10)+'" y="'+(base-bodyH)+'" width="'+(stallW-20)+'" height="'+bodyH+'" fill="var(--ink)" opacity="0.16"/>';
+      stalls += '<line x1="'+(sx+10)+'" y1="'+base+'" x2="'+(sx+10)+'" y2="'+(base-bodyH)+'" stroke="var(--ink)" stroke-width="3" opacity="0.55"/>';
+      stalls += '<line x1="'+(sx+stallW-10)+'" y1="'+base+'" x2="'+(sx+stallW-10)+'" y2="'+(base-bodyH)+'" stroke="var(--ink)" stroke-width="3" opacity="0.55"/>';
+    }
+    return '<svg class="page-banner-svg" viewBox="0 0 '+W+' '+H+'" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustrated market bunting and stalls.">' +
+      '<rect width="'+W+'" height="'+H+'" fill="var(--paper-card)"/>' +
+      '<line x1="0" y1="26" x2="'+W+'" y2="26" stroke="var(--rule)" stroke-width="2"/>' +
+      bunting + stalls +
+      '<line x1="0" y1="190" x2="'+W+'" y2="190" stroke="var(--rule)" stroke-width="2"/>' +
+      '</svg>';
+  }
+
+  function stayBannerSVG(){
+    var W=1200, H=200, windows='';
+    var winN=7, winW=76, winH=100, gap=(W-winN*winW)/(winN+1);
+    for (var i=0;i<winN;i++){
+      var x = gap + i*(winW+gap), y=40, tone = i%3===0 ? 'var(--gold)' : 'var(--canal)';
+      windows += '<rect x="'+x+'" y="'+y+'" width="'+winW+'" height="'+winH+'" fill="var(--ink)" opacity="0.14"/>';
+      windows += '<rect x="'+x+'" y="'+y+'" width="'+winW+'" height="'+winH+'" fill="none" stroke="var(--ink)" stroke-width="2.5" opacity="0.55"/>';
+      windows += '<rect x="'+(x-14)+'" y="'+y+'" width="10" height="'+winH+'" fill="'+tone+'" opacity="0.8"/>';
+      windows += '<rect x="'+(x+winW+4)+'" y="'+y+'" width="10" height="'+winH+'" fill="'+tone+'" opacity="0.8"/>';
+      if (i%2===0) windows += '<rect x="'+(x+8)+'" y="'+(y+winH+6)+'" width="'+(winW-16)+'" height="9" fill="var(--gold)" opacity="0.7"/>';
+    }
+    var doorX=(W-90)/2;
+    return '<svg class="page-banner-svg" viewBox="0 0 '+W+' '+H+'" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="An illustrated row of shuttered townhouse windows.">' +
+      '<rect width="'+W+'" height="'+H+'" fill="var(--paper-card)"/>' +
+      windows +
+      '<path d="'+archPath(doorX,190,90,120)+'" fill="var(--ink)" opacity="0.16"/>' +
+      '<path d="'+archPath(doorX,190,90,120)+'" fill="none" stroke="var(--ink)" stroke-width="2.5" opacity="0.55"/>' +
+      '</svg>';
+  }
+
+  function marketplaceBannerSVG(){
+    var W=1200, H=200, icons=[], cx;
+    function bike(cx,cy){
+      return '<g transform="translate('+cx+','+cy+')" stroke="var(--ink)" stroke-width="4" fill="none" opacity="0.8">' +
+        '<circle cx="-34" cy="22" r="26"/><circle cx="34" cy="22" r="26"/>' +
+        '<path d="M-34,22 L-6,-14 L34,22 M-6,-14 L-14,22 M-6,-14 L6,-24 L18,-24" stroke-linecap="round" stroke-linejoin="round"/>' +
+        '<circle cx="6" cy="-24" r="5" fill="var(--radicchio)" stroke="none" opacity="1"/>' +
+        '</g>';
+    }
+    function table(cx,cy){
+      return '<g transform="translate('+cx+','+cy+')" opacity="0.85">' +
+        '<rect x="-40" y="-6" width="80" height="10" rx="2" fill="var(--canal)"/>' +
+        '<rect x="-32" y="4" width="6" height="34" fill="var(--ink)" opacity="0.7"/>' +
+        '<rect x="26" y="4" width="6" height="34" fill="var(--ink)" opacity="0.7"/>' +
+        '</g>';
+    }
+    function plant(cx,cy){
+      return '<g transform="translate('+cx+','+cy+')" opacity="0.9">' +
+        '<path d="M-18,38 L18,38 L12,10 L-12,10 Z" fill="var(--gold)" opacity="0.75"/>' +
+        leafCluster(0,-8,0.62,false) +
+        '</g>';
+    }
+    function record(cx,cy){
+      return '<g transform="translate('+cx+','+cy+')" opacity="0.85">' +
+        '<circle r="34" fill="var(--ink)" opacity="0.85"/>' +
+        '<circle r="24" fill="none" stroke="var(--paper-card)" stroke-width="1.5" opacity="0.6"/>' +
+        '<circle r="15" fill="none" stroke="var(--paper-card)" stroke-width="1.5" opacity="0.6"/>' +
+        '<circle r="4" fill="var(--radicchio)"/>' +
+        '</g>';
+    }
+    function cup(cx,cy){
+      return '<g transform="translate('+cx+','+cy+')" opacity="0.85">' +
+        '<path d="M-20,0 L18,0 L14,34 Q-2,42 -16,34 Z" fill="var(--canal)"/>' +
+        '<path d="M18,4 Q34,4 32,18 Q30,30 16,28" fill="none" stroke="var(--canal)" stroke-width="4"/>' +
+        '<path d="M-6,-10 Q-2,-18 -8,-24 M6,-10 Q10,-18 4,-24" fill="none" stroke="var(--ink-soft)" stroke-width="2" stroke-linecap="round"/>' +
+        '</g>';
+    }
+    var fns=[bike,table,plant,record,cup], n=fns.length, step=W/n;
+    var body='';
+    for (var i=0;i<n;i++){ cx = step*i+step/2; body += fns[i](cx, 120); }
+    return '<svg class="page-banner-svg" viewBox="0 0 '+W+' '+H+'" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustrated icons of a bike, table, plant, record, and cup.">' +
+      '<rect width="'+W+'" height="'+H+'" fill="var(--paper-card)"/>' +
+      '<line x1="40" y1="168" x2="'+(W-40)+'" y2="168" stroke="var(--rule)" stroke-width="2"/>' +
+      body +
+      '</svg>';
+  }
+
+  function reviewsBannerSVG(){
+    var W=1200, H=200, waterY=140, stars='';
+    var starData=[[140,44,10],[300,70,7],[520,36,12],[760,64,8],[960,42,9],[1080,80,6]];
+    starData.forEach(function(s){
+      stars += '<polygon points="'+starPoints(s[0],s[1],s[2],s[2]*0.42,5)+'" fill="var(--gold)" opacity="0.85"/>';
+    });
+    var islandX=W/2-90, islandY=waterY;
+    return '<svg class="page-banner-svg" viewBox="0 0 '+W+' '+H+'" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="An illustrated island market on the canal beneath scattered stars.">' +
+      '<rect width="'+W+'" height="'+H+'" fill="var(--paper-card)"/>' +
+      '<rect x="0" y="'+waterY+'" width="'+W+'" height="'+(H-waterY)+'" fill="var(--canal-soft)"/>' +
+      '<path d="'+wavyPath(waterY+16,4,50,W)+'" fill="none" stroke="var(--canal)" stroke-width="1.4" opacity="0.5"/>' +
+      '<path d="'+wavyPath(waterY+34,4,50,W)+'" fill="none" stroke="var(--canal)" stroke-width="1.4" opacity="0.35"/>' +
+      '<ellipse cx="'+(islandX+90)+'" cy="'+islandY+'" rx="120" ry="16" fill="var(--ink)" opacity="0.18"/>' +
+      '<path d="'+archPath(islandX+40,islandY,26,30)+'" fill="var(--radicchio)" opacity="0.85"/>' +
+      '<path d="'+archPath(islandX+90,islandY,26,38)+'" fill="var(--canal)" opacity="0.85"/>' +
+      '<path d="'+archPath(islandX+140,islandY,26,26)+'" fill="var(--radicchio)" opacity="0.7"/>' +
+      stars +
+      '</svg>';
+  }
+
+  function regionIcon(kind){
+    if (kind === 'asolo') return '<svg class="icon" viewBox="0 0 48 48"><path d="M4,40 L24,10 L44,40 Z" fill="var(--ink)" opacity="0.7"/><rect x="18" y="14" width="12" height="10" fill="var(--radicchio)" opacity="0.9"/><path d="M18,14 L18,8 L22,11 L18,14" fill="var(--gold)"/></svg>';
+    if (kind === 'conegliano') return '<svg class="icon" viewBox="0 0 48 48">' +
+      [0,1,2,3].map(function(i){ return '<path d="M'+(2+i*4)+',44 L'+(46-i*4)+',44 L'+(40-i*7)+','+(34-i*7)+' L'+(8+i*7)+','+(34-i*7)+' Z" fill="var(--canal)" opacity="'+(0.45+i*0.13)+'"/>'; }).join('') +
+      '<circle cx="24" cy="8" r="4" fill="var(--gold)"/><circle cx="18" cy="12" r="3.4" fill="var(--gold)" opacity="0.85"/><circle cx="30" cy="12" r="3.4" fill="var(--gold)" opacity="0.85"/>' +
+      '</svg>';
+    if (kind === 'follina') return '<svg class="icon" viewBox="0 0 48 48"><path d="'+archPath(10,40,28,30)+'" fill="none" stroke="var(--ink)" stroke-width="3"/><path d="'+archPath(18,40,12,16)+'" fill="var(--gold)" opacity="0.8"/></svg>';
+    if (kind === 'venice') return '<svg class="icon" viewBox="0 0 48 48"><path d="M6,30 Q14,22 24,26 Q34,30 42,22 L40,34 Q24,40 8,34 Z" fill="var(--canal)" opacity="0.85"/><line x1="34" y1="22" x2="34" y2="8" stroke="var(--ink)" stroke-width="2.5"/><path d="M4,38 Q24,44 44,38" fill="none" stroke="var(--canal)" stroke-width="2" opacity="0.5"/></svg>';
+    return '';
+  }
+
+  function renderMarketplaceCards(list){
+    if (!list.length) return '<p class="muted-note">No items listed right now.</p>';
+    return list.map(function(item){
+      return '' +
+        '<div class="listing" data-cat="' + escapeHtml(item.category) + '">' +
+          '<div class="listing-top"><h3>' + escapeHtml(item.title) + '</h3><span class="price">€' + escapeHtml(item.price) + '</span></div>' +
+          '<div class="loc">' + escapeHtml(item.location) + '</div>' +
+          '<p class="desc">' + escapeHtml(item.desc) + '</p>' +
+          '<p class="amenities">Condition: ' + escapeHtml(item.condition) + ' · posted ' + escapeHtml(item.posted) + '</p>' +
+          '<div class="listing-foot"><span class="host">Seller: ' + escapeHtml(item.seller) + '</span><span class="tag ' + escapeHtml(item.badgeKind) + '">' + escapeHtml(item.badgeText) + '</span></div>' +
+        '</div>';
+    }).join('');
+  }
+
+  function renderStayCards(list){
+    if (!list.length) return '<p class="muted-note">No stays listed right now.</p>';
+    return list.map(function(item){
+      return '' +
+        '<div class="listing" data-cat="' + escapeHtml(item.type) + '">' +
+          '<div class="listing-top"><h3>' + escapeHtml(item.title) + '</h3><span class="price">€' + escapeHtml(item.price) + '<span style="font-weight:400;color:var(--ink-soft);">/night</span></span></div>' +
+          '<div class="loc">' + item.location + '</div>' +
+          '<p class="desc">' + escapeHtml(item.desc) + '</p>' +
+          '<p class="amenities">' + item.amenities + '</p>' +
+          '<div class="listing-foot"><span class="host">Hosted by ' + item.host + '</span><span class="tag ' + escapeHtml(item.badgeKind) + '">' + escapeHtml(item.badgeText) + '</span></div>' +
+        '</div>';
+    }).join('');
+  }
+
+  function renderPendingMarketplace(list){
+    if (!list.length) return '<p class="muted-note">Nothing waiting for review.</p>';
+    return '<div class="card-grid">' + list.map(function(item){
+      return '' +
+        '<div class="pending-card">' +
+          '<div class="listing-top"><h3>' + escapeHtml(item.title) + '</h3><span class="price">€' + escapeHtml(item.price) + '</span></div>' +
+          '<div class="loc">' + escapeHtml(item.location) + ' · ' + escapeHtml(item.category) + '</div>' +
+          '<p class="desc">' + escapeHtml(item.desc) + '</p>' +
+          '<p class="amenities">Condition: ' + escapeHtml(item.condition) + '</p>' +
+          '<p class="amenities">Submitted by ' + escapeHtml(item.sellerName) + ' · ' + escapeHtml(item.contact) + ' · ' + escapeHtml(item.submittedAt) + '</p>' +
+          '<div class="listing-foot"><span class="host">Pending review</span><span style="display:flex;gap:0.5rem;">' +
+            '<button class="btn small" data-action="approve" data-kind="marketplace" data-id="' + escapeHtml(item.id) + '">Approve</button>' +
+            '<button class="btn ghost small" data-action="reject" data-kind="marketplace" data-id="' + escapeHtml(item.id) + '">Reject</button>' +
+          '</span></div>' +
+        '</div>';
+    }).join('') + '</div>';
+  }
+
+  function renderPendingStay(list){
+    if (!list.length) return '<p class="muted-note">Nothing waiting for review.</p>';
+    return '<div class="card-grid">' + list.map(function(item){
+      return '' +
+        '<div class="pending-card">' +
+          '<div class="listing-top"><h3>' + escapeHtml(item.title) + '</h3><span class="price">€' + escapeHtml(item.price) + '/night</span></div>' +
+          '<div class="loc">' + escapeHtml(item.location) + ' · ' + escapeHtml(item.type) + '</div>' +
+          '<p class="desc">' + escapeHtml(item.desc) + '</p>' +
+          '<p class="amenities">' + escapeHtml(item.amenities) + '</p>' +
+          '<p class="amenities">Submitted by ' + escapeHtml(item.hostName) + ' · ' + escapeHtml(item.contact) + ' · ' + escapeHtml(item.submittedAt) + '</p>' +
+          '<div class="listing-foot"><span class="host">Pending review</span><span style="display:flex;gap:0.5rem;">' +
+            '<button class="btn small" data-action="approve" data-kind="stay" data-id="' + escapeHtml(item.id) + '">Approve</button>' +
+            '<button class="btn ghost small" data-action="reject" data-kind="stay" data-id="' + escapeHtml(item.id) + '">Reject</button>' +
+          '</span></div>' +
+        '</div>';
+    }).join('') + '</div>';
+  }
+
+  function renderBody(state){
+    return '' +
+    '<div class="topbar"><div class="topbar-inner">' +
+      '<a class="brand" href="#home"><span class="name">Treviso</span><span class="region">&amp; the Veneto</span></a>' +
+      '<nav class="mainnav">' +
+        '<a class="nav-link" href="#home">Home</a>' +
+        '<a class="nav-link" href="#events">Events</a>' +
+        '<a class="nav-link" href="#stay">Stay</a>' +
+        '<a class="nav-link" href="#marketplace">Marketplace</a>' +
+        '<a class="nav-link" href="#reviews">Reviews</a>' +
+      '</nav>' +
+    '</div></div>' +
+
+    '<section class="page" id="home">' +
+      '<div class="wrap">' +
+        '<div class="hero">' +
+          '<div class="page-banner">' + homeHeroSVG() + '</div>' +
+          '<p class="eyebrow">Treviso, Veneto, Italy</p>' +
+          '<h1>A city stitched together by canals, porticoes, and radicchio-red winters.</h1>' +
+          '<p class="lede">Half an hour from Venice by train and centuries from its crowds, Treviso is cut through by the Sile and its side-canals, shaded by seven hundred years of frescoed arcades, and still runs on the same rhythms — market, aperitivo, market again — that gave it the old nickname <em>Marca Gioiosa et Amorosa</em>, the joyful and amorous march.</p>' +
+          '<div class="facts-strip">' +
+            '<div class="fact"><div class="num">89 BC</div><div class="label">founded as the Roman <em>municipium</em> of Tarvisium, on the Via Postumia</div></div>' +
+            '<div class="fact"><div class="num">95 km</div><div class="label">length of the spring-fed Sile, among the longest in Europe</div></div>' +
+            '<div class="fact"><div class="num">1339–1797</div><div class="label">under the Venetian Republic, when most of the frescoed centre was built</div></div>' +
+            '<div class="fact"><div class="num">1971</div><div class="label">tiramisù is invented at Le Beccherie, a café still on Piazza Ancillotto</div></div>' +
+          '</div>' +
+        '</div>' +
+
+        '<section class="rule-top"><div class="two-col">' +
+          '<div>' +
+            '<p class="eyebrow">Città d\'acqua</p>' +
+            '<h2 style="margin-top:0.5rem; font-size:1.5rem;">A city built on water</h2>' +
+            '<div class="prose" style="margin-top:0.9rem;">' +
+              '<p>The Sile splits into smaller canals as it reaches the old town — the Cagnan and the Buranelli among them — running under bridges and behind houses in a way that makes half the city feel like it\'s built on a series of islands. The <strong>Pescheria</strong>, the fish market, sits on one of them: a small artificial island ringed by water on all sides, still used for exactly what it was built for.</p>' +
+              '<p>Beyond the walls, the river slows into the <strong>Sile Regional Park</strong>, protected since 1991 — flat, well-marked towpaths follow the water out through wetlands and old mills toward the lagoon.</p>' +
+            '</div>' +
+          '</div>' +
+          '<div>' +
+            '<p class="eyebrow">Seven centuries under Venice</p>' +
+            '<h2 style="margin-top:0.5rem; font-size:1.5rem;">Frescoes, arcades, and walls</h2>' +
+            '<div class="prose" style="margin-top:0.9rem;">' +
+              '<p>Treviso came under Venetian rule in 1339 and stayed there for close to four and a half centuries, long enough for the city to absorb Venice\'s habit of painting building facades rather than just building them. Under the porticoes of <strong>Calmaggiore</strong>, the street linking the cathedral to <strong>Piazza dei Signori</strong>, faded frescoes still show through the render.</p>' +
+              '<p>An Allied bombing raid in April 1944 destroyed a large part of the historic centre; much of what stands today was carefully rebuilt afterward, inside the 16th-century Venetian walls that still ring the old town almost without a gap.</p>' +
+            '</div>' +
+          '</div>' +
+        '</div></section>' +
+
+        '<section class="rule-top">' +
+          '<div class="section-head">' +
+            '<p class="eyebrow">On the table</p>' +
+            '<h2>Radicchio, Prosecco, and a dessert born by accident of naming</h2>' +
+            '<p>Treviso\'s food identity is unusually specific for a city its size — three things, each with a real claim to fame, none of them a stretch.</p>' +
+          '</div>' +
+          '<div class="prose">' +
+            '<p><strong>Radicchio Rosso di Treviso IGP</strong>, the bitter red chicory with white ribs, is a winter crop — forced and blanched in running water in December and January, then grilled, risotto\'d, or eaten raw with just oil and salt. <strong>Prosecco</strong> is administered from Treviso, which is the official capital of the Prosecco DOC; the steeper hills between Conegliano and Valdobbiadene, north of the city, became a UNESCO World Heritage site in 2019. And <strong>tiramisù</strong> — Venetian dialect for “pick me up” — was invented here in 1971, a fact the city is quietly proud of and does not let visitors forget.</p>' +
+          '</div>' +
+        '</section>' +
+
+        '<section class="rule-top">' +
+          '<div class="section-head">' +
+            '<p class="eyebrow">Day trips</p>' +
+            '<h2>Beyond the walls: the Veneto</h2>' +
+            '<p>Treviso makes an easy base — most of the following are under an hour away by car or train.</p>' +
+          '</div>' +
+          '<div class="region-grid">' +
+            '<div class="region-card">' + regionIcon('asolo') + '<h3>Asolo</h3><p>A hill town with a castle and a Roman aqueduct, once home to the actress Eleonora Duse. Known locally as the “city of a hundred horizons.”</p><div class="dist">~35 min by car</div></div>' +
+            '<div class="region-card">' + regionIcon('conegliano') + '<h3>Conegliano &amp; Valdobbiadene</h3><p>The steep, terraced hills at the heart of Prosecco Superiore — a UNESCO World Heritage wine landscape since 2019.</p><div class="dist">~45 min by car</div></div>' +
+            '<div class="region-card">' + regionIcon('follina') + '<h3>Follina</h3><p>A small village built around the Cistercian Abbey of Santa Maria in Sanavalle, one of the best-preserved in the Veneto.</p><div class="dist">~50 min by car</div></div>' +
+            '<div class="region-card">' + regionIcon('venice') + '<h3>Venice</h3><p>Regular direct trains reach Venezia Santa Lucia in around 30 minutes — close enough for an evening trip without staying over.</p><div class="dist">~30 min by train</div></div>' +
+          '</div>' +
+        '</section>' +
+
+        '<section class="rule-top">' +
+          '<div class="section-head"><p class="eyebrow">Get into it</p><h2>Start exploring</h2></div>' +
+          '<div class="hub-grid">' +
+            '<a class="hub-card" href="#events"><span class="glyph">§</span><h3>Events</h3><p>Markets, festivals, and live music happening around the city.</p><span class="go">See what\'s on &rarr;</span></a>' +
+            '<a class="hub-card" href="#stay"><span class="glyph">&#8962;</span><h3>Stay</h3><p>Rooms, apartments, and countryside stays from local hosts.</p><span class="go">Browse stays &rarr;</span></a>' +
+            '<a class="hub-card" href="#marketplace"><span class="glyph">&curren;</span><h3>Marketplace</h3><p>Bikes, furniture, and other things neighbours are selling.</p><span class="go">Browse items &rarr;</span></a>' +
+            '<a class="hub-card" href="#reviews"><span class="glyph">&#10022;</span><h3>Reviews</h3><p>Notes from residents and visitors on what\'s worth your time.</p><span class="go">Read reviews &rarr;</span></a>' +
+          '</div>' +
+        '</section>' +
+      '</div>' +
+    '</section>' +
+
+    '<section class="page" id="events" hidden><div class="wrap">' +
+      '<section class="page-head">' +
+        '<p class="eyebrow">What\'s on</p><h2 style="margin-top:0.5rem; font-size:clamp(1.8rem,3.4vw,2.4rem);">Events in Treviso</h2>' +
+        '<p style="color:var(--ink-soft); margin-top:0.6rem; max-width:52ch;">A running list of markets, tastings, and music around the city. Example listings — dates shown are illustrative.</p>' +
+        '<div class="page-banner">' + eventsBannerSVG() + '</div>' +
+      '</section>' +
+      '<section class="rule-top">' +
+        '<div class="filter-bar">' +
+          '<button data-filter="all" class="active">All</button>' +
+          '<button data-filter="markets">Markets &amp; fairs</button>' +
+          '<button data-filter="food">Food &amp; wine</button>' +
+          '<button data-filter="music">Music</button>' +
+          '<button data-filter="culture">Culture</button>' +
+        '</div>' +
+        '<div class="events-list">' +
+          '<div class="event-card" data-cat="markets"><div class="date-block"><div class="mon">Sep</div><div class="day">12</div></div><div><h3>Mercato del Sile</h3><div class="meta">Riviera Santa Margherita · Sat–Sun, 9:00–19:00</div><div class="desc">Riverside artisan and produce market along the Sile, with local cheese, honey, and early-season radicchio stalls.</div></div><div class="event-tag-col"><span class="tag accent">Markets</span></div></div>' +
+          '<div class="event-card" data-cat="food"><div class="date-block"><div class="mon">Oct</div><div class="day">03</div></div><div><h3>Assaggi in Piazza</h3><div class="meta">Piazza dei Signori · 18:00–23:00</div><div class="desc">An evening tasting walk through Prosecco producers and radicchio dishes from restaurants around the square.</div></div><div class="event-tag-col"><span class="tag canal">Food &amp; wine</span></div></div>' +
+          '<div class="event-card" data-cat="markets"><div class="date-block"><div class="mon">Oct</div><div class="day">17</div></div><div><h3>Fiera di San Luca</h3><div class="meta">Borgo Cavour · Sat–Sun, all day</div><div class="desc">A long-running antiques and flea market spilling down one of the old town\'s main streets.</div></div><div class="event-tag-col"><span class="tag accent">Markets</span></div></div>' +
+          '<div class="event-card" data-cat="music"><div class="date-block"><div class="mon">Nov</div><div class="day">07</div></div><div><h3>Note sul Cagnan</h3><div class="meta">Pescheria island · from 20:30</div><div class="desc">A small jazz series held on the fish market island, with the canal running on both sides of the audience.</div></div><div class="event-tag-col"><span class="tag">Music</span></div></div>' +
+          '<div class="event-card" data-cat="food"><div class="date-block"><div class="mon">Nov</div><div class="day">21</div></div><div><h3>Radicchio Rosso IGP Weekend</h3><div class="meta">City-wide · Sat–Sun</div><div class="desc">Trattorias across Treviso run special menus built around the peak of the radicchio season.</div></div><div class="event-tag-col"><span class="tag canal">Food &amp; wine</span></div></div>' +
+          '<div class="event-card" data-cat="culture"><div class="date-block"><div class="mon">Dec</div><div class="day">13</div></div><div><h3>Concerto di Santa Lucia</h3><div class="meta">Duomo di San Pietro · 20:00</div><div class="desc">A choir concert held in the Romanesque cathedral, a short walk from Piazza dei Signori.</div></div><div class="event-tag-col"><span class="tag">Culture</span></div></div>' +
+          '<div class="event-card" data-cat="markets"><div class="date-block"><div class="mon">Dec</div><div class="day">05</div></div><div><h3>Mercatini di Natale</h3><div class="meta">Piazza dei Signori &amp; Calmaggiore · through Jan 6</div><div class="desc">Wooden stalls under the porticoes for the full run-up to Epiphany, with mulled wine and roasted chestnuts.</div></div><div class="event-tag-col"><span class="tag accent">Markets</span></div></div>' +
+        '</div>' +
+      '</section>' +
+    '</div></section>' +
+
+    '<section class="page" id="stay" hidden><div class="wrap">' +
+      '<section class="page-head"><div class="page-head-row"><div>' +
+        '<p class="eyebrow">Places to stay</p><h2>Accommodation to rent</h2>' +
+        '<p>Rooms, apartments, and countryside stays from local hosts. Example listings for now — hosts and photos to follow.</p>' +
+      '</div><a class="btn" href="#list">+ List your place</a></div>' +
+      '<div class="page-banner">' + stayBannerSVG() + '</div>' +
+      '</section>' +
+      '<section class="rule-top">' +
+        '<div class="filter-bar">' +
+          '<button data-filter="all" class="active">All</button>' +
+          '<button data-filter="apartment">Apartments</button>' +
+          '<button data-filter="room">Rooms</button>' +
+          '<button data-filter="villa">Villas &amp; countryside</button>' +
+        '</div>' +
+        '<div class="card-grid" id="stay-grid">' + renderStayCards(state.stay) + '</div>' +
+      '</section>' +
+    '</div></section>' +
+
+    '<section class="page" id="marketplace" hidden><div class="wrap">' +
+      '<section class="page-head"><div class="page-head-row"><div>' +
+        '<p class="eyebrow">For sale</p><h2>Marketplace</h2>' +
+        '<p>Things neighbours are selling around the city. Example listings — contact details to follow.</p>' +
+      '</div><a class="btn" href="#sell">+ Sell an item</a></div>' +
+      '<div class="page-banner">' + marketplaceBannerSVG() + '</div>' +
+      '</section>' +
+      '<section class="rule-top">' +
+        '<div class="filter-bar">' +
+          '<button data-filter="all" class="active">All</button>' +
+          '<button data-filter="furniture">Furniture</button>' +
+          '<button data-filter="bikes">Bikes</button>' +
+          '<button data-filter="electronics">Electronics</button>' +
+          '<button data-filter="other">Other</button>' +
+        '</div>' +
+        '<div class="card-grid" id="marketplace-grid">' + renderMarketplaceCards(state.marketplace) + '</div>' +
+      '</section>' +
+    '</div></section>' +
+
+    '<section class="page" id="reviews" hidden><div class="wrap">' +
+      '<section class="page-head">' +
+        '<p class="eyebrow">From residents &amp; visitors</p><h2 style="margin-top:0.5rem; font-size:clamp(1.8rem,3.4vw,2.4rem);">Reviews</h2>' +
+        '<p style="color:var(--ink-soft); margin-top:0.6rem; max-width:52ch;">Notes on places and experiences around the city. Example entries.</p>' +
+        '<div class="page-banner">' + reviewsBannerSVG() + '</div>' +
+      '</section>' +
+      '<section class="rule-top"><div class="reviews-grid">' +
+        '<div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><h3>The Pescheria at nine in the morning</h3><p class="body">Go early, before the tour groups. The stallholders are still setting up the fish on ice and the whole little island smells like the canal and citrus. Worth the walk even if you\'re not buying anything.</p><div class="byline"><b>Marta</b> · Treviso resident</div></div>' +
+        '<div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#189;</div><h3>Cycling the Sile towpath to Casale</h3><p class="body">Flat, shaded, and almost entirely off-road — you can rent a bike near the station and be out of the city in ten minutes. Bring water, there isn\'t much between towns.</p><div class="byline"><b>Jonas</b> · visiting from Munich</div></div>' +
+        '<div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;</div><h3>Aperitivo hour in Piazza dei Signori</h3><p class="body">Loud, crowded, and exactly what you want after a day of walking. Spritz is everywhere, obviously, but ask for one made with the local radicchio-infused amaro instead — more interesting.</p><div class="byline"><b>Lena</b> · weekend visitor</div></div>' +
+        '<div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><h3>Walking the walls at sunset</h3><p class="body">The Venetian walls almost fully encircle the old town and much of the top is walkable or a quiet road. Start near Porta San Tomaso and go clockwise — the light on the water in the moat is unreal by golden hour.</p><div class="byline"><b>Priya</b> · first visit to Treviso</div></div>' +
+        '<div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;</div><h3>Shopping under the Calmaggiore porticoes</h3><p class="body">Rain or shine, you can walk the whole street between the Duomo and the piazza without an umbrella. Look up occasionally — there are still traces of old frescoes on some of the upper facades.</p><div class="byline"><b>Davide</b> · Treviso resident</div></div>' +
+        '<div class="review"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><h3>A day in the Prosecco hills</h3><p class="body">Rented a car and drove up to Valdobbiadene for the afternoon — the terraced vineyards are steeper than any photo makes them look. Book a cantina visit ahead in autumn; harvest weekends fill up fast.</p><div class="byline"><b>Sam</b> · day-tripped from Treviso</div></div>' +
+      '</div></section>' +
+    '</div></section>' +
+
+    '<section class="page" id="sell" hidden><div class="wrap">' +
+      '<section class="page-head">' +
+        '<p class="eyebrow">Sell something</p><h2 style="margin-top:0.5rem; font-size:clamp(1.8rem,3.4vw,2.4rem);">List an item for sale</h2>' +
+        '<p style="color:var(--ink-soft); margin-top:0.6rem; max-width:56ch;">Submissions are reviewed before they appear in the marketplace — you\'ll see it live once it\'s approved.</p>' +
+      '</section>' +
+      '<section class="rule-top">' +
+        '<div id="sell-notice"></div>' +
+        '<form class="form-card" id="sell-form" novalidate>' +
+          '<div class="form-row">' +
+            '<div class="field-group"><label for="sell-title">Title</label><input class="field" id="sell-title" name="title" required maxlength="80"></div>' +
+            '<div class="field-group"><label for="sell-price">Price (€)</label><input class="field" id="sell-price" name="price" type="number" min="0" step="1" required></div>' +
+          '</div>' +
+          '<div class="form-row">' +
+            '<div class="field-group"><label for="sell-category">Category</label><select class="field" id="sell-category" name="category" required>' +
+              '<option value="furniture">Furniture</option><option value="bikes">Bikes</option><option value="electronics">Electronics</option><option value="other" selected>Other</option>' +
+            '</select></div>' +
+            '<div class="field-group"><label for="sell-condition">Condition</label><select class="field" id="sell-condition" name="condition" required>' +
+              '<option>New</option><option>Like new</option><option selected>Good</option><option>Fair</option><option>Used</option>' +
+            '</select></div>' +
+          '</div>' +
+          '<div class="field-group"><label for="sell-location">Location / neighbourhood</label><input class="field" id="sell-location" name="location" required maxlength="60"></div>' +
+          '<div class="field-group"><label for="sell-desc">Description</label><textarea class="field" id="sell-desc" name="desc" rows="4" required maxlength="500"></textarea></div>' +
+          '<div class="form-row">' +
+            '<div class="field-group"><label for="sell-name">Your name</label><input class="field" id="sell-name" name="sellerName" required maxlength="40"></div>' +
+            '<div class="field-group"><label for="sell-contact">Contact email</label><input class="field" id="sell-contact" name="contact" type="email" required></div>' +
+          '</div>' +
+          '<p class="fineprint">Your contact details are only shown to the site admin for approval, never published on the listing.</p>' +
+          '<div class="form-actions"><button class="btn" type="submit">Submit for review</button></div>' +
+        '</form>' +
+      '</section>' +
+    '</div></section>' +
+
+    '<section class="page" id="list" hidden><div class="wrap">' +
+      '<section class="page-head">' +
+        '<p class="eyebrow">Have a place?</p><h2 style="margin-top:0.5rem; font-size:clamp(1.8rem,3.4vw,2.4rem);">List a room or house to rent</h2>' +
+        '<p style="color:var(--ink-soft); margin-top:0.6rem; max-width:56ch;">Submissions are reviewed before they appear under Stay — you\'ll see it live once it\'s approved.</p>' +
+      '</section>' +
+      '<section class="rule-top">' +
+        '<div id="list-notice"></div>' +
+        '<form class="form-card" id="list-form" novalidate>' +
+          '<div class="form-row">' +
+            '<div class="field-group"><label for="list-title">Title</label><input class="field" id="list-title" name="title" required maxlength="80"></div>' +
+            '<div class="field-group"><label for="list-price">Price per night (€)</label><input class="field" id="list-price" name="price" type="number" min="0" step="1" required></div>' +
+          '</div>' +
+          '<div class="form-row">' +
+            '<div class="field-group"><label for="list-type">Type</label><select class="field" id="list-type" name="type" required>' +
+              '<option value="apartment">Apartment</option><option value="room">Room</option><option value="villa">Villa &amp; countryside</option>' +
+            '</select></div>' +
+            '<div class="field-group"><label for="list-location">Location</label><input class="field" id="list-location" name="location" required maxlength="60"></div>' +
+          '</div>' +
+          '<div class="field-group"><label for="list-desc">Description</label><textarea class="field" id="list-desc" name="desc" rows="4" required maxlength="500"></textarea></div>' +
+          '<div class="field-group"><label for="list-amenities">Amenities</label><input class="field" id="list-amenities" name="amenities" placeholder="wifi, kitchen, parking…" required maxlength="120"></div>' +
+          '<div class="form-row">' +
+            '<div class="field-group"><label for="list-host">Your name</label><input class="field" id="list-host" name="hostName" required maxlength="40"></div>' +
+            '<div class="field-group"><label for="list-contact">Contact email</label><input class="field" id="list-contact" name="contact" type="email" required></div>' +
+          '</div>' +
+          '<p class="fineprint">Your contact details are only shown to the site admin for approval, never published on the listing.</p>' +
+          '<div class="form-actions"><button class="btn" type="submit">Submit for review</button></div>' +
+        '</form>' +
+      '</section>' +
+    '</div></section>' +
+
+    '<section class="page" id="admin" hidden><div class="wrap">' +
+      '<section class="page-head">' +
+        '<p class="eyebrow">Moderation</p><h2 style="margin-top:0.5rem; font-size:clamp(1.8rem,3.4vw,2.4rem);">Review submissions</h2>' +
+        '<p style="color:var(--ink-soft); margin-top:0.6rem; max-width:56ch;">Approve to publish a submission live, or reject to discard it. Only people with edit access to this page can moderate.</p>' +
+      '</section>' +
+      '<div id="admin-notice"></div>' +
+      '<section class="rule-top">' +
+        '<h3 style="font-size:1.1rem; margin-bottom:1rem;">Items for sale</h3>' +
+        '<div id="admin-marketplace">' + renderPendingMarketplace(state.pendingMarketplace) + '</div>' +
+      '</section>' +
+      '<section class="rule-top">' +
+        '<h3 style="font-size:1.1rem; margin-bottom:1rem;">Accommodation</h3>' +
+        '<div id="admin-stay">' + renderPendingStay(state.pendingStay) + '</div>' +
+      '</section>' +
+    '</div></section>' +
+
+    '<footer>' +
+      '<div>' +
+        '<div class="brandline">Treviso &amp; the Veneto</div>' +
+        '<div class="note" style="margin-top:0.4rem;">City and region facts researched for accuracy; Events and Reviews contain example content.</div>' +
+        '<a class="admin-link" href="#admin">Review submissions &rarr;</a>' +
+      '</div>' +
+      '<div class="note">&copy; 2026</div>' +
+    '</footer>';
+  }
+
+  document.getElementById('app').innerHTML = renderBody(STATE);
+
+  /* ---------- routing ---------- */
+  function route(){
+    var hash = (location.hash || '#home').slice(1);
+    var pages = document.querySelectorAll('.page');
+    var found = false;
+    pages.forEach(function(p){
+      var match = p.id === hash;
+      p.hidden = !match;
+      if (match) found = true;
+    });
+    if (!found) { document.getElementById('home').hidden = false; hash = 'home'; }
+    document.querySelectorAll('.nav-link').forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('href') === '#' + hash);
+    });
+    window.scrollTo(0,0);
+  }
+  window.addEventListener('hashchange', route);
+  route();
+
+  /* ---------- filters ---------- */
+  document.querySelectorAll('.filter-bar').forEach(function(bar){
+    bar.addEventListener('click', function(e){
+      var btn = e.target.closest('button[data-filter]');
+      if (!btn) return;
+      var val = btn.dataset.filter;
+      bar.querySelectorAll('button').forEach(function(b){ b.classList.toggle('active', b === btn); });
+      var list = bar.parentElement.querySelector('.events-list, .card-grid');
+      if (!list) return;
+      list.querySelectorAll('[data-cat]').forEach(function(card){
+        card.style.display = (val === 'all' || card.dataset.cat === val) ? '' : 'none';
+      });
+    });
+  });
+
+  /* ---------- success banner after a reload that followed a submission ---------- */
+  try {
+    var justSubmitted = sessionStorage.getItem('justSubmitted');
+    if (justSubmitted) {
+      sessionStorage.removeItem('justSubmitted');
+      var target = justSubmitted === 'sell' ? document.getElementById('sell-notice') : document.getElementById('list-notice');
+      if (target) target.innerHTML = '<div class="notice success">Thanks — your submission is in for review. It will appear once approved.</div>';
+    }
+  } catch (e) {}
+
+  /* ---------- publishing (artifact capability) ---------- */
+  function buildFullDocument(state){
+    var json = JSON.stringify(state).replace(/</g, '\\u003c');
+    var newScript = SCRIPT_SOURCE.replace(
+      /\/\*STATE_START\*\/[\s\S]*?\/\*STATE_END\*\//,
+      '/*STATE_START*/\n  var STATE = ' + json + ';\n  /*STATE_END*/'
+    );
+    var headLinks = Array.prototype.map.call(
+      document.querySelectorAll('link[rel="preconnect"], link[rel="stylesheet"]'),
+      function(l){ return l.outerHTML; }
+    ).join('');
+    var css = document.getElementById('page-style').textContent;
+    var head = '<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">' +
+      '<title>' + escapeHtml(document.title) + '</title>' + headLinks +
+      '<style id="page-style">' + css + '</style>';
+    return '<!doctype html><html><head>' + head + '</head><body><div id="app"></div><script>' + newScript + '<' + '/script></body></html>';
+  }
+
+  function showNotice(container, kind, msg){
+    if (!container) return;
+    container.innerHTML = '<div class="notice ' + kind + '">' + msg + '</div>';
+  }
+
+  function readOnlyMessage(){
+    return 'This view is read-only here — ask the site owner to give you edit access so submissions and approvals can be saved.';
+  }
+
+  function publish(newState){
+    if (!window.claude || !window.claude.use) return Promise.reject({ code: 'not_granted' });
+    return window.claude.use('artifact').then(function(a){
+      if (!a) { var err = new Error('artifact capability unavailable'); err.code = 'not_granted'; throw err; }
+      return a.publish(buildFullDocument(newState));
+    });
+  }
+
+  function cloneState(){ return JSON.parse(JSON.stringify(STATE)); }
+
+  function wireForm(formId, noticeId, kind){
+    var form = document.getElementById(formId);
+    if (!form) return;
+    var notice = document.getElementById(noticeId);
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var btn = form.querySelector('button[type="submit"]');
+      var fd = new FormData(form);
+      var newState = cloneState();
+      var id = (kind === 'sell' ? 'p' : 'a') + Date.now().toString(36) + Math.random().toString(36).slice(2,6);
+      var submittedAt = new Date().toISOString().slice(0,10);
+      if (kind === 'sell') {
+        newState.pendingMarketplace.push({
+          id: id, title: fd.get('title'), price: fd.get('price'), category: fd.get('category'),
+          condition: fd.get('condition'), location: fd.get('location'), desc: fd.get('desc'),
+          sellerName: fd.get('sellerName'), contact: fd.get('contact'), submittedAt: submittedAt
+        });
+      } else {
+        newState.pendingStay.push({
+          id: id, title: fd.get('title'), price: fd.get('price'), type: fd.get('type'),
+          location: fd.get('location'), desc: fd.get('desc'), amenities: fd.get('amenities'),
+          hostName: fd.get('hostName'), contact: fd.get('contact'), submittedAt: submittedAt
+        });
+      }
+      btn.disabled = true; btn.textContent = 'Submitting…';
+      showNotice(notice, '', '');
+      notice.innerHTML = '';
+      try { sessionStorage.setItem('justSubmitted', kind); } catch (err) {}
+      function attempt(retried){
+        publish(newState).catch(function(err){
+          var code = err && err.code;
+          try { sessionStorage.removeItem('justSubmitted'); } catch (e2) {}
+          if (code === 'not_writer' || code === 'not_granted' || code === 'consent_required' || code === 'not_declared' || code === 'capability_disabled') {
+            btn.disabled = true;
+            showNotice(notice, 'error', readOnlyMessage());
+          } else if (code === 'conflict') {
+            /* another version is already publishing in; the view reloads on its own */
+          } else if (code === 'upstream_error' && !retried) {
+            setTimeout(function(){ attempt(true); }, 800 + Math.random() * 700);
+          } else {
+            btn.disabled = false; btn.textContent = 'Submit for review';
+            showNotice(notice, 'error', 'Something went wrong submitting this — please try again.');
+          }
+        });
+      }
+      attempt(false);
+    });
+  }
+  wireForm('sell-form', 'sell-notice', 'sell');
+  wireForm('list-form', 'list-notice', 'list');
+
+  function wireAdmin(containerId, kind){
+    var container = document.getElementById(containerId);
+    if (!container) return;
+    container.addEventListener('click', function(e){
+      var btn = e.target.closest('button[data-action]');
+      if (!btn) return;
+      var id = btn.dataset.id;
+      var action = btn.dataset.action;
+      var pendKey = kind === 'marketplace' ? 'pendingMarketplace' : 'pendingStay';
+      var liveKey = kind === 'marketplace' ? 'marketplace' : 'stay';
+      var newState = cloneState();
+      var idx = newState[pendKey].findIndex(function(x){ return x.id === id; });
+      if (idx === -1) return;
+      var entry = newState[pendKey].splice(idx, 1)[0];
+      if (action === 'approve') {
+        entry.badgeText = 'Available';
+        entry.badgeKind = 'open';
+        if (kind === 'marketplace') entry.posted = 'today';
+        newState[liveKey].push(entry);
+      }
+      var card = btn.closest('.pending-card');
+      var buttons = card.querySelectorAll('button');
+      buttons.forEach(function(b){ b.disabled = true; });
+      var adminNotice = document.getElementById('admin-notice');
+      publish(newState).catch(function(err){
+        var code = err && err.code;
+        buttons.forEach(function(b){ b.disabled = false; });
+        if (code === 'not_writer' || code === 'not_granted' || code === 'consent_required' || code === 'not_declared' || code === 'capability_disabled') {
+          showNotice(adminNotice, 'error', readOnlyMessage());
+        } else if (code === 'conflict') {
+          /* view reloads to the winning version on its own */
+        } else {
+          showNotice(adminNotice, 'error', 'Something went wrong saving that — please try again.');
+        }
+      });
+    });
+  }
+  wireAdmin('admin-marketplace', 'marketplace');
+  wireAdmin('admin-stay', 'stay');
+})();
+</script>
